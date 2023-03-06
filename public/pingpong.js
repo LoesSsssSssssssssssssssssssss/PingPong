@@ -151,10 +151,6 @@ function update () {
     }
 
     let player = (ball.x < canvas.width/2) ? user : com
-
-    // ДОБАВИТЬ счетчик очков + обновления поля после гола
-
-
     
     if(collision(ball,player)){
         let collidePoint = ball.y - (player.y + player.height/2)
@@ -167,7 +163,7 @@ function update () {
         // Изменяем скорость X и Y
         ball.velocityX = direction * ball.speed * Math.cos(angleRad)
         ball.velocityY = ball.speed * Math.sin(angleRad)
-        ball.speed += 0.5
+        ball.speed += 1
     }
 
     // счетчик
