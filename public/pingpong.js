@@ -1,5 +1,6 @@
 const canvas = document.getElementById("pong")
 const ctx = canvas.getContext("2d")
+let socket
 
 // ракетка пользователя
 
@@ -45,7 +46,7 @@ function drawRect (x,y,w,h, color) {
 const net = {
     x: canvas.width/2 - 1,
     y: 0,
-    width: 2,
+    width: 2,   
     height: 10,
     color: "WHITE"
 }
@@ -79,6 +80,7 @@ function drawText (text,x,y,color) {
 // рисуем игру
 
 function render(){
+
     drawRect(0,0, canvas.width, canvas.height, "BLACK")
     
     //сеть
